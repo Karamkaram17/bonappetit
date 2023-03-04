@@ -2,9 +2,20 @@ body {
   padding: 0;
   margin: 0;
   background-color: rgba(251, 247, 246);
+  position: relative;
 }
+
+a,
+a:active,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .bg {
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -14,8 +25,9 @@ body {
   opacity: 0.3;
 }
 .bg img {
-  width: 100vw;
+  width: 90vw;
   max-width: 400px;
+  margin: auto;
 }
 .bg2 {
   width: 100vw;
@@ -23,16 +35,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -10;
   background-color: rgba(251, 247, 246);
+  /* box-shadow: 10px 0 10px rgb(0, 0, 0); */
+}
+.bg2 article {
+  margin: auto;
+  text-align: center;
 }
 .bg2 img {
-  width: 100vw;
+  width: 90vw;
   max-width: 400px;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 .bg2 p {
   line-height: 0.4rem;
+}
+.bg2 span {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bg2 i {
   margin: 0 10px;
@@ -40,13 +62,11 @@ body {
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
   display: grid;
 }
 
 header {
+  margin: 1rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,26 +93,34 @@ header img {
 main {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 section {
   text-align: center;
   margin: 0 auto 50px auto;
+  padding: 1rem 0;
+  max-width: 400px;
+  background-color: rgba(251, 247, 246, 0.592);
+  box-shadow: 0 0 10px rgba(142, 127, 127, 0.803);
+  text-shadow: 0 0 10px rgb(132, 129, 129);
 }
 
 .title {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 1.5rem;
-  padding: 10px;
+  padding: 10px 0;
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 5px;
+  text-shadow: 0 0 10px rgb(119, 118, 118);
 }
 .title img {
   max-height: 2rem;
-  margin: 0;
+  margin: 0 1rem;
   padding: 0;
+  position: relative;
 }
 
 .title-name {
@@ -109,11 +137,12 @@ section {
 
 .item {
   display: grid;
-  grid-template-columns: 1fr 50px;
-  max-width: 300px;
-  margin: auto;
-  padding: 5px;
-  box-shadow: 2px 2px 10px rgb(230, 228, 228);
+  grid-template-columns: 1fr 50px 30px;
+  margin: 0.35rem 0.5rem;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 10px rgb(213, 213, 213);
+  border-radius: 10px;
+  /* background-color: rgba(251, 247, 246, 0.316); */
 }
 
 .item-name {
@@ -124,9 +153,30 @@ section {
   text-align: end;
 }
 
-.red {
-  background-color: red;
+.inv {
+  color: transparent;
 }
-.blue {
-  background-color: blue;
+
+@media only screen and (orientation: landscape) {
+  .bg img,
+  .bg2 img {
+    width: 90vh;
+  }
+  .bg2 img {
+    margin-bottom: 0;
+  }
+  .landscape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg2 p {
+    margin: 0;
+  }
+  .bg2 span {
+    margin: 0;
+  }
+  .bg2 i {
+    margin: 0 10px;
+  }
 }
