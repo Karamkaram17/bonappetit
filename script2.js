@@ -178,14 +178,10 @@ categories.forEach((category) => {
   section.innerHTML += `
       <div class="title">  
         <div class="title-name">
-          <img src="img/logo.jpeg" />
           ${category}
-          <span  class="inv">_</span> 
         </div>
-        <div class="title-op">
-          /${units[categories.indexOf(category)]} 
-          <img src="img/logo.jpeg" />
-        </div>
+        <div class="title-op"><img src="img/background.jpeg" /></div>
+        <div class="title-op2"><img src="img/background.jpeg" /></div>
       </div>
   `;
   const newItems = data.filter((item) => item.category === category);
@@ -199,19 +195,6 @@ categories.forEach((category) => {
   `;
   });
   mainDOM.appendChild(section);
-});
-
-const bgDOM = document.getElementById("bg");
-const headerDOM = document.getElementById("header");
-
-window.addEventListener("scroll", function () {
-  var topPosition = headerDOM.getBoundingClientRect().top;
-
-  if (topPosition <= 0 + window.innerHeight / 4) {
-    bgDOM.style.display = "flex";
-  } else {
-    bgDOM.style.display = "none";
-  }
 });
 
 // footer

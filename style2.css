@@ -30,7 +30,6 @@ a:hover {
   margin: auto;
 }
 .bg2 {
-  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -84,15 +83,15 @@ header p {
   margin: 0;
 }
 header img {
-  max-height: 80px;
-  margin: 0;
+  max-height: 50px;
+  margin: 0 10px;
   padding: 0;
   position: relative;
   z-index: -15;
 }
 main {
   margin: 0;
-  padding: 5px;
+  padding: 0 5px;
   position: relative;
 }
 
@@ -104,11 +103,12 @@ section {
   background-color: rgba(251, 247, 246, 0.592);
   box-shadow: 0 0 10px rgba(142, 127, 127, 0.803);
   text-shadow: 0 0 10px rgb(132, 129, 129);
+  position: relative;
 }
 
 .title {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   font-size: 1.5rem;
   padding: 10px 0;
   text-decoration: underline;
@@ -126,18 +126,28 @@ section {
 .title-name {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
 }
 
 .title-op {
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.title-op2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.title-op img,
+.title-op2 img {
+  margin: 0.5rem;
+  max-height: 3rem;
 }
 
 .item {
   display: grid;
-  grid-template-columns: 1fr 50px 30px;
+  grid-template-columns: 1fr 60px 30px;
   margin: 0.35rem 0.5rem;
   padding: 5px 10px;
   box-shadow: 2px 2px 10px rgb(213, 213, 213);
@@ -172,7 +182,6 @@ footer div:last-child {
 footer a {
   color: black;
 }
-
 @media only screen and (orientation: landscape) {
   .bg img,
   .bg2 img {
