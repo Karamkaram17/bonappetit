@@ -212,8 +212,7 @@ window.addEventListener("scroll", () => {
 //dark light mode btn
 const toggleBtn = document.getElementById("toggle-btn");
 const sectionTitleImg1 = document.querySelectorAll(".header-img");
-toggleBtn.addEventListener("click", handleClick);
-function handleClick() {
+let handleClick = () => {
   document.body.classList.toggle("dark-mode");
   if (document.body.classList.contains("dark-mode")) {
     toggleBtn.innerHTML = `<i class="fas fa-sun"></i>`;
@@ -222,8 +221,20 @@ function handleClick() {
     toggleBtn.innerHTML = `<i class="fas fa-moon"></i>`;
     sectionTitleImg1.forEach((e) => (e.style.display = "flex"));
   }
-}
+};
 
 if (navigator.userAgent.match(/samsung/i)) {
   sectionTitleImg1.forEach((e) => (e.style.display = "none"));
+  handleClick = () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      toggleBtn.innerHTML = `<i class="fas fa-sun"></i>`;
+      sectionTitleImg1.forEach((e) => (e.style.display = "none"));
+    } else {
+      toggleBtn.innerHTML = `<i class="fas fa-moon"></i>`;
+      sectionTitleImg1.forEach((e) => (e.style.display = "flex"));
+    }
+  };
 }
+
+toggleBtn.addEventListener("click", handleClick);
