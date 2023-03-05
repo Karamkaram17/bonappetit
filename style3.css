@@ -1,4 +1,5 @@
 :root {
+  --text_color: black;
   --bg-Color: rgba(251, 247, 246);
   --section-Bg-Color: rgba(251, 247, 246, 0.592);
   --box-Shadow: 0 0 10px rgba(142, 127, 127, 0.803);
@@ -6,6 +7,7 @@
   --title-Text-Shadow: 0 0 10px rgb(119, 118, 118);
   --section-Text-Shadow: 0 0 10px rgb(132, 129, 129);
   --footer-Color: rgb(100, 102, 99);
+  --a-Tag-Color: black;
 }
 
 body {
@@ -13,35 +15,18 @@ body {
   margin: 0;
   background-color: var(--bg-Color);
   position: relative;
+  color: var(--text_color);
 }
 
 a,
 a:active,
 a:hover {
-  color: black;
+  color: var(--a-Tag-Color);
   text-decoration: none;
   cursor: pointer;
 }
 
 .bg {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: -10;
-  opacity: 0.3;
-}
-
-.bg img {
-  width: 90vw;
-  max-width: 400px;
-  margin: auto;
-}
-
-.bg2 {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -49,29 +34,30 @@ a:hover {
   background-color: var(--bg-Color);
 }
 
-.bg2 article {
+.bg article {
   margin: auto;
   text-align: center;
 }
 
-.bg2 img {
+.bg img {
   width: 90vw;
   max-width: 400px;
   margin-bottom: 1.5rem;
+  border-radius: 50%;
 }
 
-.bg2 p {
+.bg p {
   margin: 0;
 }
 
-.bg2 span {
+.bg span {
   margin-top: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.bg2 i {
+.bg i {
   margin: 0 10px;
   font-size: larger;
 }
@@ -99,6 +85,7 @@ header p {
   align-items: center;
   justify-content: center;
   margin: 0;
+  font-weight: 900;
 }
 
 header img {
@@ -142,6 +129,7 @@ section {
   margin: 0 1rem;
   padding: 0;
   position: relative;
+  border-radius: 50%;
 }
 
 .title-name {
@@ -224,27 +212,27 @@ footer div:last-child {
 
 @media only screen and (orientation: landscape) {
   .bg img,
-  .bg2 img {
+  .bg img {
     width: 90vh;
   }
-  .bg2 img {
+  .bg img {
     margin-bottom: 0;
   }
-  .landscape {
+  .bg-info {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .bg2 p {
+  .bg p {
     margin: 0;
   }
-  .bg2 p:last-of-type {
+  .bg p:last-of-type {
     margin-left: 5px;
   }
-  .bg2 span {
+  .bg span {
     margin: 0;
   }
-  .bg2 i {
+  .bg i {
     margin: 0 10px;
   }
 }
@@ -252,5 +240,22 @@ footer div:last-child {
 @media screen and (min-width: 400px) {
   #wp-btn {
     left: calc((100vw - 400px) / 2 + 10px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text_color: rgb(213, 209, 209);
+    --bg-Color: rgb(28, 28, 28);
+    --section-Bg-Color: rgba(7, 7, 7, 0.1);
+    --box-Shadow: 0 0 10px rgba(255, 255, 255, 0.247);
+    --items-Box-Shadow: 2px 2px 10px rgba(46, 46, 46, 0.705);
+    --title-Text-Shadow: 0 0 10px rgba(255, 255, 255, 0.332);
+    --section-Text-Shadow: 0 0 10px rgba(255, 255, 255, 0.774);
+    --footer-Color: rgb(165, 163, 163);
+    --a-Tag-Color: rgb(255, 255, 255);
+  }
+  header img {
+    display: none;
   }
 }

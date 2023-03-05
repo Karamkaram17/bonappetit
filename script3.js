@@ -175,9 +175,7 @@ categories.forEach((category) => {
   const section = document.createElement("section");
   section.innerHTML += `
       <div class="title">  
-        <div class="title-name">
-          ${category}
-        </div>
+        <div class="title-name">${category}</div>
         <div class="title-op"><img src="img/background.jpeg" /></div>
         <div class="title-op2"><img src="img/background.jpeg" /></div>
       </div>
