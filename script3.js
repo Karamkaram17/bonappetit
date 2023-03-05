@@ -164,12 +164,10 @@ const data = [
 
 const mainDOM = document.getElementById("main");
 const categories = [];
-const units = [];
 
 data.forEach((item) => {
   if (!categories.includes(item.category)) {
     categories.push(item.category);
-    units.push(item.unit);
   }
 });
 
@@ -202,7 +200,7 @@ let copy = document.getElementById("copy");
 copy.innerHTML = `&copy; ${date}`;
 
 //wp btn
-const wpBtn = document.getElementById("wpbtn");
+const wpBtn = document.getElementById("wp-btn");
 const appearPoint = window.innerHeight * 0.1;
 window.addEventListener("scroll", () => {
   const scrollPosition = window.pageYOffset;
