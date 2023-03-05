@@ -214,29 +214,12 @@ const toggleBtn = document.getElementById("toggle-btn");
 const sectionTitleImg1 = document.querySelectorAll(".header-img");
 toggleBtn.addEventListener("click", handleClick);
 function handleClick() {
-  if (document.body.classList.contains("light-mode")) {
-    document.body.classList.remove("light-mode");
-    document.body.classList.add("dark-mode");
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
     toggleBtn.innerHTML = `<i class="fas fa-sun"></i>`;
     sectionTitleImg1.forEach((e) => (e.style.display = "none"));
   } else {
-    document.body.classList.remove("dark-mode");
-    document.body.classList.add("light-mode");
     toggleBtn.innerHTML = `<i class="fas fa-moon"></i>`;
     sectionTitleImg1.forEach((e) => (e.style.display = "flex"));
   }
-}
-
-//to flip the toggle btn icon
-if (
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches
-) {
-  toggleBtn.innerHTML = `<i class="fas fa-sun"></i>`;
-  sectionTitleImg1.forEach((e) => (e.style.display = "none"));
-  document.body.classList.add("dark-mode");
-} else {
-  toggleBtn.innerHTML = `<i class="fas fa-moon"></i>`;
-  sectionTitleImg1.forEach((e) => (e.style.display = "flex"));
-  document.body.classList.add("light-mode");
 }
