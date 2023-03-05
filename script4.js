@@ -232,7 +232,7 @@ if (navigator.userAgent.match(/samsung/i)) {
       sectionTitleImg1.forEach((e) => (e.style.display = "none"));
     } else {
       toggleBtn.innerHTML = `<i class="fas fa-moon"></i>`;
-      sectionTitleImg1.forEach((e) => (e.style.display = "flex"));
+      sectionTitleImg1.forEach((e) => (e.style.display = "none"));
     }
   };
 }
