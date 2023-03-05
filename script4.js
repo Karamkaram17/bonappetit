@@ -223,3 +223,7 @@ function handleClick() {
     sectionTitleImg1.forEach((e) => (e.style.display = "flex"));
   }
 }
+
+if (navigator.userAgent.match(/samsung/i)) {
+  sectionTitleImg1.forEach((e) => (e.style.display = "none"));
+}
