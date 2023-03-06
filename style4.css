@@ -161,7 +161,7 @@ section {
 
 .item {
   display: grid;
-  grid-template-columns: 1fr 90px;
+  grid-template-columns: 1fr auto;
   margin: 0.35rem 0.5rem;
   padding: 5px 10px;
   box-shadow: var(--items-Box-Shadow);
@@ -170,10 +170,15 @@ section {
 
 .item-name {
   text-align: start;
+  padding-right: 5px;
 }
 
 .item-price {
   text-align: end;
+}
+
+.options {
+  font-size: 1rem;
 }
 
 footer {
