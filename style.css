@@ -11,6 +11,10 @@
   --image-brightness: 1;
 }
 
+.light-mode {
+  transition: all 0.7s ease-in-out;
+}
+
 .dark-mode {
   --text_color: rgb(213, 209, 209);
   --bg-Color: rgb(28, 28, 28);
@@ -22,6 +26,7 @@
   --footer-Color: rgb(165, 163, 163);
   --a-Tag-Color: rgb(255, 255, 255);
   --image-brightness: 0.9;
+  transition: all 0.7s ease-in-out;
 }
 
 body {
