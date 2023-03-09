@@ -443,9 +443,9 @@ function loader() {
     loaded = true;
     progressBar.style.width = `100%`;
     setTimeout(() => {
-      progressBar.parentElement.style.display = "none";
       content.style.display = "block";
-    }, 500);
+      progressBar.parentElement.style.display = "none";
+    }, 150);
   };
 
   document.addEventListener("DOMContentLoaded", function () {
