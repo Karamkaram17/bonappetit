@@ -440,7 +440,7 @@ const content = document.getElementById("content");
 window.onload = function () {
   progressBar.style.width = `100%`;
   setTimeout(() => {
-    progressBar.style.display = "none";
+    progressBar.parentElement.style.display = "none";
     content.style.display = "block";
   }, 500);
 };
