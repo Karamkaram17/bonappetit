@@ -372,7 +372,7 @@ const data = [
     price: 0.5,
   },
 ];
-
+loader();
 const mainDOM = document.getElementById("main");
 const categories = [];
 
@@ -435,17 +435,33 @@ let handleClick = () => {
 
 toggleBtn.addEventListener("click", handleClick);
 
-const progressBar = document.getElementById("progress");
-const content = document.getElementById("content");
-window.onload = function () {
-  progressBar.style.width = `100%`;
-  setTimeout(() => {
-    progressBar.parentElement.style.display = "none";
-    content.style.display = "block";
-  }, 500);
-};
+function loader() {
+  let loaded = false;
+  const progressBar = document.getElementById("progress");
+  const content = document.getElementById("content");
+  window.onload = function () {
+    loaded = true;
+    progressBar.style.width = `100%`;
+    setTimeout(() => {
+      progressBar.parentElement.style.display = "none";
+      content.style.display = "block";
+    }, 500);
+  };
 
-document.addEventListener("DOMContentLoaded", function () {
-  let width = 40;
-  progressBar.style.width = `${width}%`;
-});
+  document.addEventListener("DOMContentLoaded", function () {
+    let width = 20;
+    progressBar.style.width = `${width}%`;
+    let interval = setInterval(function () {
+      if (loaded === true) return clearInterval(interval);
+      width += 5;
+      progressBar.style.width = width + "%";
+      if (width >= 80) clearInterval(interval);
+    }, 100);
+    let SlowInterval = setInterval(function () {
+      if (loaded === true) return clearInterval(SlowInterval);
+      width += 1;
+      progressBar.style.width = width + "%";
+      if (width > 80 && width >= 98) clearInterval(SlowInterval);
+    }, 500);
+  });
+}
