@@ -16,7 +16,7 @@
 }
 
 .dark-mode {
-  --text_color: rgb(213, 209, 209);
+  --text_color: rgb(227, 227, 227);
   --bg-Color: rgb(28, 28, 28);
   --section-Bg-Color: rgba(7, 7, 7, 0.1);
   --box-Shadow: 0 0 10px rgba(255, 255, 255, 0.247);
@@ -24,7 +24,7 @@
   --title-Text-Shadow: 0 0 10px rgba(255, 255, 255, 0.332);
   --section-Text-Shadow: 0 0 10px rgba(255, 255, 255, 0.774);
   --footer-Color: rgb(165, 163, 163);
-  --a-Tag-Color: rgb(255, 255, 255);
+  --a-Tag-Color: rgb(227, 227, 227);
   --image-brightness: 0.9;
   transition: all 0.5s ease-in;
 }
@@ -39,6 +39,10 @@ body {
   background-color: var(--bg-Color);
   position: relative;
   color: var(--text_color);
+}
+
+svg {
+  fill: var(--a-Tag-Color);
 }
 
 #progress-bar {
@@ -87,14 +91,11 @@ a:hover {
   right: 10px;
   top: 10px;
   animation: fade-in 1s ease-in-out;
+  cursor: pointer;
 }
 
 #toggle-btn:hover {
   box-shadow: var(--box-Shadow);
-}
-
-svg {
-  fill: var(--a-Tag-Color);
 }
 
 .bg svg {
@@ -119,7 +120,7 @@ svg {
 
 .bg p {
   margin: 0;
-  width: 16.5rem;
+  width: 16.9rem;
   margin: auto;
   animation: slideLeft 1s ease-in-out, fade-in 1s ease-in-out;
 }
