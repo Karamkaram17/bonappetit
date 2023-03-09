@@ -47,7 +47,8 @@ svg {
   -webkit-user-select: none; /* For Safari */
   -ms-user-select: none; /* For IE/Edge */
 }
-svg::selection {
+svg:hover,
+svg:active {
   background-color: transparent;
 }
 
