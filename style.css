@@ -93,6 +93,15 @@ a:hover {
   box-shadow: var(--box-Shadow);
 }
 
+svg {
+  fill: var(--a-Tag-Color);
+}
+
+.bg svg {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
 .bg article {
   margin: auto;
   text-align: center;
@@ -110,7 +119,7 @@ a:hover {
 
 .bg p {
   margin: 0;
-  width: 270px;
+  width: 16.5rem;
   margin: auto;
   animation: slideLeft 1s ease-in-out, fade-in 1s ease-in-out;
 }
@@ -121,6 +130,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   animation: slideLeft 1.2s ease-in-out, fade-in 1.2s ease-in-out;
+}
+.bg a {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bg i {
@@ -260,8 +275,15 @@ footer div:last-child {
   animation: fade-in 1s;
 }
 
-#wp-btn i {
-  font-size: 1.7em;
+#wp-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wp-btn svg {
+  height: 1.7rem;
+  width: 1.7rem;
 }
 
 @media only screen and (orientation: landscape) {
