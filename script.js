@@ -434,3 +434,18 @@ let handleClick = () => {
 };
 
 toggleBtn.addEventListener("click", handleClick);
+
+const progressBar = document.getElementById("progress");
+const content = document.getElementById("content");
+window.onload = function () {
+  progressBar.style.width = `100%`;
+  setTimeout(() => {
+    progressBar.style.display = "none";
+    content.style.display = "block";
+  }, 500);
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  let width = 40;
+  progressBar.style.width = `${width}%`;
+});

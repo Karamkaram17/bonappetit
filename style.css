@@ -39,7 +39,19 @@ body {
   background-color: var(--bg-Color);
   position: relative;
   color: var(--text_color);
-  display: grid;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #f2f2f2;
+}
+
+#progress {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 1s ease;
 }
 
 img {
