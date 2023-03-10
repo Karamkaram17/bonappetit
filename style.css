@@ -15,16 +15,6 @@
   transition: all 0.5s ease-in;
 }
 
-a:active,
-a:hover,
-svg:active,
-svg:hover,
-button:active,
-button:hover {
-  user-select: none;
-  background-color: inherit;
-}
-
 .dark-mode {
   --text_color: rgb(227, 227, 227);
   --bg-Color: rgb(28, 28, 28);
@@ -78,6 +68,10 @@ a:hover {
   color: var(--a-Tag-Color);
   text-decoration: none;
   cursor: pointer;
+}
+a:active,
+button:active {
+  background: transparent;
 }
 
 .bg {
