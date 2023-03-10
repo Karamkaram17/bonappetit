@@ -20,11 +20,9 @@ a:hover,
 svg:active,
 svg:hover,
 button:active,
-button:hover,
-a::selection,
-svg::selection,
-button::selection {
+button:hover {
   user-select: none;
+  background-color: inherit;
 }
 
 .dark-mode {
