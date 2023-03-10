@@ -39,7 +39,6 @@ body {
   background-color: var(--bg-Color);
   position: relative;
   color: var(--text_color);
-  display: grid;
 }
 
 svg {
@@ -68,10 +67,6 @@ a:hover {
   color: var(--a-Tag-Color);
   text-decoration: none;
   cursor: pointer;
-}
-a:active,
-button:active {
-  background: transparent;
 }
 
 .bg {
