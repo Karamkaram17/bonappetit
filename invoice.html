@@ -17,8 +17,11 @@
         </div>
         <input type="text" placeholder="name" id="name-input" />
         <input type="text" placeholder="phone" id="phone-input" />
-        <input type="number" placeholder="discount" id="discount-input" />
-        <input type="date" id="date-input" />
+        <input type="number" placeholder="discount %" id="discount-input" />
+        <div id="date-div">
+          <label for="date-input">Date :</label>
+          <input type="date" id="date-input" />
+        </div>
         <button id="invoice-btn">Print Invoice</button>
       </section>
     </div>
@@ -49,8 +52,6 @@
       </div>
       <div class="thanks">Thank you for choosing us</div>
     </div>
-
-    <!-- <button class="print-invoice">Invoice</button> -->
 
     <script src="./js/data.js"></script>
     <script src="./js/invoice.js"></script>

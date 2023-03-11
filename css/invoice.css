@@ -16,7 +16,7 @@ body {
   background-color: var(--bg-Color);
   position: relative;
   color: var(--text_color);
-  min-width: 420px;
+  min-width: 440px;
 }
 
 header {
@@ -116,24 +116,7 @@ section {
   transition: background-color 0.2s;
 }
 .item button:active {
-  background-color: rgb(49, 57, 105);
-}
-
-.print-invoice {
-  width: 100px;
-  height: 30px;
-  position: fixed;
-  bottom: 10px;
-  right: 15px;
-  border-radius: 0.35rem;
-  border: 1px solid black;
-  color: white;
-  background-color: rgb(71, 74, 73);
-  cursor: pointer;
-}
-
-.print-invoice:active {
-  background-color: rgb(105, 105, 105);
+  background-color: rgb(204, 189, 170);
 }
 
 @media screen and (min-width: 430px) {
@@ -161,6 +144,17 @@ input {
 }
 #controller button:active {
   background-color: rgb(204, 189, 170);
+}
+#date-div {
+  display: flex;
+  align-items: center;
+}
+#date-div label {
+  width: auto;
+  margin-left: 15px;
+}
+#date-div input {
+  width: 76%;
 }
 /* ========================= invoice========================== */
 #invoice {

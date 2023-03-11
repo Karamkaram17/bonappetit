@@ -9,13 +9,13 @@ const nameInvoice = document.getElementById("name-invoice");
 const phoneInvoice = document.getElementById("phone-invoice");
 const dateInvoice = document.getElementById("date-invoice");
 const categories = [];
-const cart = {};
+const cart = [];
 
 data.forEach((item) => {
   if (!categories.includes(item.category)) {
     categories.push(item.category);
   }
-  cart[item.name] = { price: item.price, count: 0, name: item.name };
+  cart.push({ ...item, count: 0 });
 });
 
 categories.forEach((category) => {
@@ -49,32 +49,30 @@ function target(e) {
   const btn = e.target;
   const count = btn.parentElement.querySelector(".item-count");
   const parent = btn.parentElement.parentElement;
+  const title = parent.parentElement.querySelector(".title-name").textContent;
+  console.log(title);
   const itemName = parent.querySelector(".item-name").textContent;
-  if (btn.classList.contains("add")) add(itemName, count);
-  if (btn.classList.contains("remove")) remove(itemName, count);
+  if (btn.classList.contains("add")) add(itemName, count, title);
+  if (btn.classList.contains("remove")) remove(itemName, count, title);
 }
 
-function add(itemName, count) {
+function add(itemName, count, title) {
   const newCount = parseInt(count.textContent) + 1;
-  cart[itemName].count = newCount;
-  modifyCount(itemName, newCount);
+  cart.find((item) => {
+    return item.name == itemName && item.category == title;
+  }).count = newCount;
+  count.innerHTML = newCount;
 }
 
-function remove(itemName, count) {
+function remove(itemName, count, title) {
   if (count.textContent == 0) return;
   const newCount = parseInt(count.textContent) - 1;
-  cart[itemName].count = newCount;
-  modifyCount(itemName, newCount);
+  cart.find((item) => {
+    return item.name == itemName && item.category == title;
+  }).count = newCount;
+  count.innerHTML = newCount;
 }
 
-function modifyCount(itemName, newCount) {
-  const targets = mainDOM.querySelectorAll(".item");
-  targets.forEach((item) => {
-    if (item.querySelector(".item-name").textContent === itemName) {
-      item.querySelector(".item-count").textContent = newCount;
-    }
-  });
-}
 const invoiceBtn = document.getElementById("invoice-btn");
 invoiceBtn.addEventListener("click", printInvoice);
 
