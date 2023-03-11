@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./invoice.css" />
+    <title>Invoice</title>
+  </head>
+  <body>
+    <header>INVOICE</header>
+    <main id="main"></main>
+    <div id="controller">
+      <section>
+        <div class="title">
+          <div class="title-name">Invoice Settings</div>
+        </div>
+        <input type="text" placeholder="name" id="name-input" />
+        <input type="text" placeholder="phone" id="phone-input" />
+        <input type="number" placeholder="discount" id="discount-input" />
+        <input type="date" id="date-input" />
+        <button id="invoice-btn">Print Invoice</button>
+      </section>
+    </div>
+    <div id="invoice">
+      <div class="invoice-header">
+        <div>
+          <h1>Bon Appetit</h1>
+          <p id="name-invoice">Name:</p>
+          <p id="phone-invoice">Phone:</p>
+          <p id="date-invoice">Date:</p>
+        </div>
+
+        <img class="img" src="./img/background.jpeg" alt="" />
+      </div>
+      <div class="table-div">
+        <table>
+          <thead>
+            <tr>
+              <th class="f1">Description</th>
+              <th class="f2">Quantity</th>
+              <th class="f3">Unit Price</th>
+              <th class="f4">Amount</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+          <tfoot id="table-footer"></tfoot>
+        </table>
+      </div>
+      <div class="thanks">Thank you for choosing us</div>
+    </div>
+
+    <!-- <button class="print-invoice">Invoice</button> -->
+
+    <script src="data.js"></script>
+    <script src="./invoice.js"></script>
+  </body>
+</html>
