@@ -6,7 +6,8 @@
   --items-Box-Shadow: 2px 2px 10px rgb(192, 189, 189);
   --title-Text-Shadow: 0 0 10px rgb(119, 118, 118);
   --section-Text-Shadow: 0 0 10px rgb(132, 129, 129);
-  --row-Bg-Color: rgb(193, 193, 193);
+  --row-border: 1px solid rgb(193, 193, 193);
+  --btn-Hover-Bg: rgb(204, 189, 170);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -16,7 +17,7 @@ body {
   background-color: var(--bg-Color);
   position: relative;
   color: var(--text_color);
-  min-width: 440px;
+  min-width: 430px;
 }
 
 header {
@@ -95,7 +96,7 @@ section {
   font-weight: bold;
   border-radius: 0.35rem;
   min-width: 20px;
-  height: 20px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,12 +112,12 @@ section {
   justify-content: center;
   font-size: 1.2rem;
   width: 70px;
-  height: 20px;
+  height: 25px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 .item button:active {
-  background-color: rgb(204, 189, 170);
+  background-color: var(--btn-Hover-Bg);
 }
 
 @media screen and (min-width: 430px) {
@@ -143,7 +144,7 @@ input {
   background-color: var(--bg-Color);
 }
 #controller button:active {
-  background-color: rgb(204, 189, 170);
+  background-color: var(--btn-Hover-Bg);
 }
 #date-div {
   display: flex;
@@ -186,7 +187,6 @@ input {
   margin-top: 5px;
   margin-bottom: 15px;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .invoice-header p {
   padding: 0;
@@ -197,17 +197,13 @@ table {
   min-width: 400px;
   max-width: 600px;
   border-collapse: collapse;
-  padding: 0 20px;
   margin: auto;
   font-size: 14px;
 }
 /* ============ table head ============= */
 thead {
-  border-bottom: 1px solid var(--row-Bg-Color);
+  border-bottom: var(--row-border);
   font-size: 14px;
-}
-thead th {
-  font-weight: bold;
 }
 th:first-of-type {
   text-align: start;
@@ -229,16 +225,14 @@ th:last-of-type {
 /* ============ table body ============= */
 
 tbody tr {
-  border-top: 1px solid var(--row-Bg-Color);
-  border-bottom: 1px solid var(--row-Bg-Color);
+  border-top: var(--row-border);
+  border-bottom: var(--row-border);
 }
 
 tr td:first-of-type {
   text-align: start;
 }
-tr td:nth-child(2) {
-  text-align: center;
-}
+tr td:nth-child(2),
 tr td:nth-child(3) {
   text-align: center;
 }
@@ -249,6 +243,6 @@ tr td:last-of-type {
 
 /* ============ table footer ============= */
 tfoot {
-  border-top: 1px solid var(--row-Bg-Color);
+  border-top: var(--row-border);
   font-weight: bold;
 }

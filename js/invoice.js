@@ -80,9 +80,12 @@ function printInvoice() {
   tableBodyDom.innerHTML = "";
   tableFooterDom.innerHTML = "";
   let TOTAL = 0;
-  nameInvoice.innerHTML = `Name: ${nameInput.value}`;
-  phoneInvoice.innerHTML = `Phone: ${phoneInput.value}`;
-  dateInvoice.innerHTML = `Date: ${dateInput.value}`;
+  if (nameInput.value !== "")
+    nameInvoice.innerHTML = `Name: ${nameInput.value}`;
+  if (phoneInput.value !== "")
+    phoneInvoice.innerHTML = `Phone: ${phoneInput.value}`;
+  if (dateInput.value !== "")
+    dateInvoice.innerHTML = `Date: ${formatDate(dateInput.value)}`;
 
   Object.keys(cart).forEach((item) => {
     if (cart[item].count !== 0) {
@@ -130,4 +133,12 @@ function printInvoice() {
 
 function toDecimalNumber(num) {
   return num.toFixed(2).padEnd(num.toFixed(2).indexOf(".") + 3, "0");
+}
+
+function formatDate(dateInput) {
+  const date = new Date(dateInput);
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const year = date.getFullYear().toString();
+  return `${day}/${month}/${year}`;
 }
