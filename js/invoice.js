@@ -80,12 +80,21 @@ function printInvoice() {
   tableBodyDom.innerHTML = "";
   tableFooterDom.innerHTML = "";
   let TOTAL = 0;
-  if (nameInput.value !== "")
+  if (nameInput.value !== "") {
     nameInvoice.innerHTML = `Name: ${nameInput.value}`;
-  if (phoneInput.value !== "")
+  } else {
+    nameInvoice.innerHTML = ``;
+  }
+  if (phoneInput.value !== "") {
     phoneInvoice.innerHTML = `Phone: ${phoneInput.value}`;
-  if (dateInput.value !== "")
+  } else {
+    phoneInvoice.innerHTML = ``;
+  }
+  if (dateInput.value !== "") {
     dateInvoice.innerHTML = `Date: ${formatDate(dateInput.value)}`;
+  } else {
+    dateInvoice.innerHTML = ``;
+  }
 
   Object.keys(cart).forEach((item) => {
     if (cart[item].count !== 0) {
