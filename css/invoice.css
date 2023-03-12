@@ -17,7 +17,8 @@ body {
   background-color: var(--bg-Color);
   position: relative;
   color: var(--text_color);
-  min-width: 430px;
+  min-width: 400px;
+  box-sizing: border-box;
 }
 
 header {
@@ -136,6 +137,11 @@ input {
   background-color: var(--bg-Color);
   width: 90%;
 }
+#controller {
+  padding: 0 1rem;
+  position: relative;
+  box-sizing: border-box;
+}
 #controller button {
   width: 94%;
   padding: 8px;
@@ -160,6 +166,7 @@ input {
 }
 /* ========================= invoice========================== */
 #invoice {
+  width: 100%;
   min-width: 400px;
   max-width: 600px;
   min-height: 150vh;
@@ -195,8 +202,7 @@ input {
 }
 table {
   width: 90%;
-  min-width: 400px;
-  max-width: 600px;
+
   border-collapse: collapse;
   margin: auto;
   font-size: 14px;

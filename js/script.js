@@ -92,3 +92,21 @@ function loader() {
     }, 500);
   });
 }
+
+const invoiceBtn = document.getElementById("main-img");
+let clickCount = 0;
+let clickTimeout;
+
+invoiceBtn.addEventListener("click", () => {
+  clickCount++;
+  if (clickCount < 5) {
+    clickTimeout = setTimeout(() => {
+      clickCount = 0;
+    }, 1000);
+  } else {
+    clearTimeout(clickTimeout);
+    clickCount = 0;
+    const url = "./invoice.html";
+    window.location.href = url;
+  }
+});
