@@ -305,8 +305,8 @@ function renderExtraFields() {
 			<div class="extra-row-inputs">
 				<div class="form-floating extra-floating">
 					<input type="text" name="extra-name" class="form-control extra-name" placeholder="Name" autocomplete="off" value="${ef.name}" id="name-input-${
-			ef.id
-		}"/>
+						ef.id
+					}"/>
 					<label for="name-input-${ef.id}">Name</label>
 				</div>
 
@@ -549,7 +549,7 @@ async function callLogApi() {
 			screenWidth: window.screen.width,
 			screenHeight: window.screen.height,
 			deviceOrientation: screen.orientation?.type || 'unknown',
-			service: '67eecd81e6108b1d259e624d',
+			service: '69a5fb8598013f3eb86e1e02',
 
 			platform: navigator.platform || 'unknown',
 			language: navigator.language || 'unknown',
