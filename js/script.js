@@ -298,12 +298,16 @@ if (invoiceBtn) {
 				};
 			});
 		}
-	} catch { /* ignore parse errors */ }
+	} catch {
+		/* ignore parse errors */
+	}
 
 	function saveCart() {
 		try {
 			sessionStorage.setItem(CART_KEY, JSON.stringify(cart));
-		} catch { /* quota errors etc. */ }
+		} catch {
+			/* quota errors etc. */
+		}
 	}
 
 	/* DOM refs */
