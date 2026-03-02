@@ -78,6 +78,23 @@ categories.forEach((category) => {
 	mainDOM.appendChild(section);
 });
 
+/* ---------- End-of-menu decorative section ---------- */
+(function addMenuEnd() {
+	const endSection = document.createElement('div');
+	endSection.className = 'menu-end';
+	const logo = MENU_DATA.store.storeLogo || '';
+	const logoImg = logo ? `<img src="${logo}" alt="" />` : '';
+	endSection.innerHTML = `
+		<div class="menu-end-inner">
+			${logoImg}
+			<p class="menu-end-text">Bon Appétit!</p>
+			<span class="menu-end-sub">${MENU_DATA.store.storeName}</span>
+			${logoImg}
+		</div>
+	`;
+	mainDOM.appendChild(endSection);
+})();
+
 function checkForUnit(unit) {
 	if (!unit) return '';
 	return `/${unit}`;
