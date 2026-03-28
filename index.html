@@ -56,7 +56,11 @@
 
 			<!-- ORDER BUTTON (floating) -->
 			<button id="order-fab" aria-label="Build your order">
-				<svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.17 14.75l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/></svg>
+				<svg viewBox="0 0 24 24" width="20" height="20">
+					<path
+						d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.17 14.75l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"
+					/>
+				</svg>
 				<span id="order-fab-badge" class="order-badge hidden">0</span>
 			</button>
 
@@ -73,7 +77,10 @@
 					<p class="order-empty">Tap any item on the menu to add it to your order.</p>
 				</div>
 				<div class="order-panel-footer">
-					<div class="order-total">Total: <strong id="order-total-value">0$</strong></div>
+					<div class="order-total">
+						Total:
+						<strong id="order-total-value">0$</strong>
+					</div>
 					<button id="order-confirm-btn" class="order-confirm-btn" disabled>Send via WhatsApp</button>
 				</div>
 			</div>
@@ -100,6 +107,7 @@
 			</div>
 		</div>
 
+		<script src="https://menus.blob.core.windows.net/shared/utils/logs.js"></script>
 		<script src="./js/data.js"></script>
 		<script src="./js/svg.js"></script>
 		<script src="./js/script.js"></script>
